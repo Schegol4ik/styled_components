@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {StyledBtn, SuperBtn} from "./components/Button.styled";
 import {Menu} from "./components/Menu.styled";
 import {Link} from "./components/Link.styled";
+import {theme} from "./styles/Theme.styled";
 
 const App = () => {
 
@@ -21,7 +22,7 @@ const App = () => {
             <Box>
                 {/* <StyledBtn as='a' href="#">Link</StyledBtn>
                 <StyledBtn as={Link} href="#">LinkComponent</StyledBtn>*/}
-                <StyledBtn color={valueInpt} fontSize={valueInptSize} active>Hello</StyledBtn>
+                <StyledBtn color={valueInpt} fontSize={valueInptSize} active >Hello</StyledBtn>
                 <StyledBtn color={valueInpt}>Hello</StyledBtn>
                 <StyledBtn color={valueInpt} typeBtn="outline">Hello</StyledBtn>
                 <StyledBtn color={valueInpt} typeBtn="primary">Hello</StyledBtn>
@@ -59,7 +60,7 @@ const Box = styled.div`
         cursor: cell;
     }
 
-    @media screen and (max-width: 800px) {
+    @media ${theme.media.tablet} {
         flex-direction: column;
     }
 `
